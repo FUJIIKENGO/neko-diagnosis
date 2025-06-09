@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>猫の取り扱い診断</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #fffaf5; }
+  h1 { color: #ed6d00; text-align: center; }
+  .question { margin-bottom: 20px; }
+  .question-title { font-weight: bold; margin-bottom: 8px; }
+  .option label { display: block; margin: 5px 0; }
+  button { margin-top: 20px; padding: 10px 20px; background: #ed6d00; color: white; border: none; border-radius: 5px; font-size: 16px; }
+  .result { margin-top: 30px; font-size: 18px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>🐾 猫の取り扱い診断 🐾</h1>
+<form id="catQuiz">
+<div class="question"><div class="question-title">Q1. 近くに猫がいる。どうする？</div>
+<div class="option"><label><input type="radio" name="q1" value="1"> 触りに行く</label></div>
+<div class="option"><label><input type="radio" name="q1" value="5"> 指先で挨拶から始める</label></div>
+<div class="option"><label><input type="radio" name="q1" value="3"> 遠くで優しく見守る</label></div>
+<div class="option"><label><input type="radio" name="q1" value="2"> 目を合わせず静かにその場を離れる</label></div>
+<div class="option"><label><input type="radio" name="q1" value="0"> 鳴き声のモノマネを始める</label></div>
+</div>
+<div class="question"><div class="question-title">Q2. 猫がこちらを見ている。あなたは？</div>
+<div class="option"><label><input type="radio" name="q2" value="1"> じっと見つめ返す</label></div>
+<div class="option"><label><input type="radio" name="q2" value="5"> ゆっくりまばたきする</label></div>
+<div class="option"><label><input type="radio" name="q2" value="3"> 視線を逸らす</label></div>
+<div class="option"><label><input type="radio" name="q2" value="2"> 手を振る</label></div>
+<div class="option"><label><input type="radio" name="q2" value="0"> スマホで撮影しようとする</label></div>
+</div>
+<div class="question"><div class="question-title">Q3. 猫を病院に連れていくことになった。あなたの対応は？</div>
+<div class="option"><label><input type="radio" name="q3" value="5"> キャリーに入る練習を事前にする</label></div>
+<div class="option"><label><input type="radio" name="q3" value="3"> お気に入りのおやつを用意して連れて行く</label></div>
+<div class="option"><label><input type="radio" name="q3" value="1"> 無理やりキャリーに入れる</label></div>
+<div class="option"><label><input type="radio" name="q3" value="2"> 音を立てずにそっと運ぶ</label></div>
+<div class="option"><label><input type="radio" name="q3" value="0"> 逃げたら全力で追いかけて捕まえる</label></div>
+</div>
+<div class="question"><div class="question-title">Q4. 猫が突然走り回っている。あなたは？</div>
+<div class="option"><label><input type="radio" name="q4" value="3"> ちょっと様子を見る</label></div>
+<div class="option"><label><input type="radio" name="q4" value="5"> 遊びたいサインだと理解して付き合う</label></div>
+<div class="option"><label><input type="radio" name="q4" value="4"> 怪我がないか静かに確認する</label></div>
+<div class="option"><label><input type="radio" name="q4" value="1"> 驚いて追いかける</label></div>
+<div class="option"><label><input type="radio" name="q4" value="0"> 「こらー！」とカミナリを落とす</label></div>
+</div>
+<div class="question"><div class="question-title">Q5. 初めての猫と接することになった。まず何をする？</div>
+<div class="option"><label><input type="radio" name="q5" value="4"> 距離を取り、様子を見ながら行動</label></div>
+<div class="option"><label><input type="radio" name="q5" value="5"> 指先を差し出して匂いをかがせる</label></div>
+<div class="option"><label><input type="radio" name="q5" value="1"> 自己紹介する</label></div>
+<div class="option"><label><input type="radio" name="q5" value="0"> 抱っこする</label></div>
+<div class="option"><label><input type="radio" name="q5" value="3"> おもちゃで遊ぼうとする</label></div>
+</div>
+<div class="question"><div class="question-title">Q6. 猫がしっぽをパタパタさせている。あなたは？</div>
+<div class="option"><label><input type="radio" name="q6" value="4"> 少し離れて様子を見る</label></div>
+<div class="option"><label><input type="radio" name="q6" value="5"> 刺激しないよう話しかけずにそっとする</label></div>
+<div class="option"><label><input type="radio" name="q6" value="2"> なでなでして落ち着かせる</label></div>
+<div class="option"><label><input type="radio" name="q6" value="1"> 無視して近づく</label></div>
+<div class="option"><label><input type="radio" name="q6" value="0"> 面白がってしっぽを掴む</label></div>
+</div>
+<div class="question"><div class="question-title">Q7. 猫が布団の上で寝ている。あなたの反応は？</div>
+<div class="option"><label><input type="radio" name="q7" value="4"> 布団の隅で寝る</label></div>
+<div class="option"><label><input type="radio" name="q7" value="3"> そっとどいてもらう</label></div>
+<div class="option"><label><input type="radio" name="q7" value="1"> そのまま無理に寝る</label></div>
+<div class="option"><label><input type="radio" name="q7" value="5"> 起こさないように別の場所で寝る</label></div>
+<div class="option"><label><input type="radio" name="q7" value="0"> 布団と一緒に畳む</label></div>
+</div>
+<div class="question"><div class="question-title">Q8. 猫がトイレの後に砂をかけずに去っていった！あなたは？</div>
+<div class="option"><label><input type="radio" name="q8" value="5"> 猫に代わって砂をかけてあげる</label></div>
+<div class="option"><label><input type="radio" name="q8" value="4"> 何も言わずそっと掃除する</label></div>
+<div class="option"><label><input type="radio" name="q8" value="2"> つい「なんでかけないの？」と話しかける</label></div>
+<div class="option"><label><input type="radio" name="q8" value="1"> トイレの前で砂をかける真似をして見せる</label></div>
+<div class="option"><label><input type="radio" name="q8" value="0"> 自分も同じトイレに失礼する</label></div>
+</div>
+<div class="question"><div class="question-title">Q9. 猫がご飯を残した。あなたは？</div>
+<div class="option"><label><input type="radio" name="q9" value="4"> 少し様子を見て片付ける</label></div>
+<div class="option"><label><input type="radio" name="q9" value="5"> 残した理由を考える</label></div>
+<div class="option"><label><input type="radio" name="q9" value="3"> 健康状態を観察する</label></div>
+<div class="option"><label><input type="radio" name="q9" value="1"> 「せっかく買ったのに！」と怒る</label></div>
+<div class="option"><label><input type="radio" name="q9" value="2"> 別のごはんにすぐ変える</label></div>
+</div>
+<div class="question"><div class="question-title">Q10. 猫が鳴きながら寄ってくる。あなたは？</div>
+<div class="option"><label><input type="radio" name="q10" value="5"> どうしたの？と優しく声をかける</label></div>
+<div class="option"><label><input type="radio" name="q10" value="4"> とりあえずなでてみる</label></div>
+<div class="option"><label><input type="radio" name="q10" value="3"> おやつを出す</label></div>
+<div class="option"><label><input type="radio" name="q10" value="1"> 無視する</label></div>
+<div class="option"><label><input type="radio" name="q10" value="0"> うるさいと注意する</label></div>
+</div>
+
+<button type="button" onclick="calculateScore()">診断する</button>
+<div id="result" class="result"></div>
+</form>
+<script>
+function calculateScore() {
+  let total = 0;
+  for (let i = 1; i <= 10; i++) {
+    const radios = document.getElementsByName('q' + i);
+    for (const radio of radios) {
+      if (radio.checked) {
+        total += parseInt(radio.value);
+        break;
+      }
+    }
+  }
+  let result = "";
+
+  if (total >= 50 && total <= 50) {
+    result = "【マタタビ】\nにゃーん！！！あなたは猫も我を忘れて酔ってしまうほどの猫マスターにゃ！あなたといるだけで猫はにゃんダフルライフ確定にゃ...";
+  }
+
+  if (total >= 40 && total <= 49) {
+    result = "【チュール】\n猫の必需品にゃ！！あなたは猫が全てを忘れて夢中になるほどの扱い上手にゃ！！";
+  }
+
+  if (total >= 31 && total <= 39) {
+    result = "【猫そのもの】\nあなたは猫の理解度がすごいにゃ！猫そのものにゃ！ただ、猫でも猫を理解しきれていないところがあるにゃ...";
+  }
+
+  if (total >= 21 && total <= 30) {
+    result = "【飼い主】\nあなたは僕らの飼い主程度には理解してるにゃ！ただ、飼い主が僕らを理解しているのなんて50%くらいにゃ！勉強の余地ありにゃ！";
+  }
+
+  if (total >= 11 && total <= 20) {
+    result = "【道端の猫じゃらし】\nあなたは道に生えてる猫じゃらしくらいの理解度にゃ！そよそよしてる時たまに僕らが遊ぶ程度にゃ！もっと精進するにゃ！";
+  }
+
+  if (total >= 1 && total <= 10) {
+    result = "【そこら辺のニンゲン】\n気安く触るにゃ！いい迷惑にゃ！";
+  }
+
+  if (total >= 0 && total <= 0) {
+    result = "【でっかい犬】\n興味無いにゃ。コメントする気もないにゃ。";
+  }
+
+  document.getElementById('result').innerText = result;
+}
+</script>
+</body>
+</html>
